@@ -34,31 +34,34 @@
       z-index: 0;
     }
 
-    /* CONTENEDOR TEXTO */
     .overlay {
       position: absolute;
       width: 100%;
       height: 100%;
       z-index: 1;
       color: #0311A8;
-      text-shadow: 0 0 0px rgba(0,0,0,0);
     }
 
-    /* FRASE (COORDENADAS) */
+    /* FRASE CENTRADA DESDE SU PUNTO */
     #frase {
       position: absolute;
-      left: 260px;   /* X FRASE */
-      top: 90px;    /* Y FRASE */
+      left: 450px;   /* punto central X */
+      top: 100px;   /* punto central Y */
+      transform: translate(-50%, -50%);
       font-size: 35px;
-      max-width: 650px;
+      text-align: center;
+      white-space: nowrap;
     }
 
-    /* CONTADOR (COORDENADAS) */
+    /* CONTADOR CENTRADO */
     #contador {
       position: absolute;
-      left: 400px;  /* X CONTADOR */
-      top: 40px;    /* Y CONTADOR */
+      left: 450px;  /* punto central X */
+      top: 50px;    /* punto central Y */
+      transform: translate(-50%, -50%);
       font-size: 35px;
+      text-align: center;
+      white-space: nowrap;
     }
 
   </style>
@@ -70,8 +73,8 @@
   </video>
 
   <div class="overlay">
-    <div id="frase"></div>
     <div id="contador"></div>
+    <div id="frase"></div>
   </div>
 
   <script>
